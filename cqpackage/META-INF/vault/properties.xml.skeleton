@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>FileVault Package Properties</comment>
+<entry key="createdBy">_user_</entry>
+<entry key="name">_name_</entry>
+<entry key="buildCount">1</entry>
+<entry key="group">_name_</entry>
+<entry key="version">_release_</entry>
+<entry key="path">/etc/packages/_name_/_release_/_name_</entry>
+</properties>

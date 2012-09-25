@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>FileVault Package Properties</comment>
+<entry key="createdBy">Siteworx Inc.</entry>
+<entry key="name">ooyala</entry>
+<entry key="buildCount">1</entry>
+<entry key="group">ooyala</entry>
+<entry key="version">0.0.1</entry>
+<entry key="path">/etc/packages/ooyala/0.0.1/_name_</entry>
+</properties>

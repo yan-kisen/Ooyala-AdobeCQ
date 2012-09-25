@@ -1,0 +1,20 @@
+GET /v2/assets/93OThlNTrdaGMIibNg8kun-3bUfWJbvp?include=metadata
+
+{
+ "asset_type": "video",
+ "duration": 30069,
+ "name": "Wildlife.wmv",
+ "publishing_rule_id": "dc5f54cf12de4d0cbc203e8ccd7f6091",
+ "preview_image_url": "http://ak.c.ooyala.com/93OThlNTrdaGMIibNg8kun-3bUfWJbvp/rgJ9C9zoqtySpkWH5hMDoxOmFkO7UOTK",
+ "created_at": "2012-07-16T16:35:58Z",
+ "embed_code": "93OThlNTrdaGMIibNg8kun-3bUfWJbvp",
+ "updated_at": "2012-07-16T16:49:11Z",
+ "time_restrictions": null,
+ "external_id": null,
+ "hosted_at": null,
+ "original_file_name": "Wildlife.wmv",
+ "metadata": {
+ },
+ "description": null,
+ "status": "live"
+}
