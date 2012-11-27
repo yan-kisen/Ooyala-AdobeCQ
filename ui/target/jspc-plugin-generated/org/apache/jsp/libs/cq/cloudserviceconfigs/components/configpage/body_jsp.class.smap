@@ -1,0 +1,64 @@
+SMAP
+body_jsp.java
+JSP
+*S JSP
+*F
++ 0 body.jsp
+libs/cq/cloudserviceconfigs/components/configpage/body.jsp
++ 1 global.jsp
+libs/foundation/global.jsp
++ 2 init.jsp
+libs/cq/cloudserviceconfigs/components/configpage/init.jsp
++ 3 opendialog.jspf
+libs/cq/cloudserviceconfigs/components/configpage/opendialog.jspf
+*L
+24:107
+58#1:109
+59:111
+60:113
+61:115
+62:117
+62:119,4
+66:174
+24#0:175
+22#2:176
+58#1:178
+59:180
+60:182
+61:184
+62:186
+62:188,4
+66:222
+23#2:223,2
+24:225
+25:362,6
+25:228
+45:229
+47,17:231
+25#0:248
+27,10:250
+36,2:260
+37:381,8
+37:264
+38,2:265,3
+40,3:271
+43,3:274,3
+46,13:283
+59,2:297
+60,7:299
+67:306,5
+68,2:311
+70,2:314
+71,7:316
+77:402,6
+77,2:325
+19#3,3:327
+21:329,2
+22:331,3
+23,3:334
+25:336,2
+26,2:338
+27:339,2
+28,2:341
+78#0,3:342
+*E

@@ -1,0 +1,13 @@
+SMAP
+body_portlet_jsp.java
+JSP
+*S JSP
+*F
++ 0 body.portlet.jsp
+libs/foundation/components/page/body.portlet.jsp
+*L
+21:56
+22:58
+22:79,6
+22:61
+*E

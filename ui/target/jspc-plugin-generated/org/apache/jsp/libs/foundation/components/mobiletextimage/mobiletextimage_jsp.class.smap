@@ -1,0 +1,39 @@
+SMAP
+mobiletextimage_jsp.java
+JSP
+*S JSP
+*F
++ 0 mobiletextimage.jsp
+libs/foundation/components/mobiletextimage/mobiletextimage.jsp
++ 1 global.jsp
+libs/foundation/global.jsp
+*L
+29:85
+58#1:87
+59:89
+60:91
+61:93
+62:95
+62:97,4
+66:152
+31#0,35:155
+65:190,5
+66,20:196
+85:216,2
+86,13:219
+98:232,3
+99,2:236
+100:238
+101,13:240
+113:253
+114,2:255
+115:257
+116,5:259
+120:264
+121,2:266
+122:268
+123,2:270
+124:272,3
+125,2:276
+126:278
+*E

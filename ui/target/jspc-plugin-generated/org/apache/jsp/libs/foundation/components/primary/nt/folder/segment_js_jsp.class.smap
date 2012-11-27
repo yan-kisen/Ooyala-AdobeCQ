@@ -1,0 +1,13 @@
+SMAP
+segment_js_jsp.java
+JSP
+*S JSP
+*F
++ 0 segment.js.jsp
+libs/foundation/components/primary/nt/folder/segment.js.jsp
+*L
+31,2:21
+32:92,4
+33,18:118
+51,22:24
+*E

@@ -1,0 +1,33 @@
+SMAP
+mobilereference_jsp.java
+JSP
+*S JSP
+*F
++ 0 mobilereference.jsp
+libs/foundation/components/mobilereference/mobilereference.jsp
++ 1 global.jsp
+libs/foundation/global.jsp
+*L
+29,6:101
+58#1:108
+59:110
+60:112
+61:114
+62:116
+62:118,4
+66:173
+35#0,16:29
+53,20:177
+72:197,4
+72:202,8
+72:215
+73,2:217
+74:219,4
+74:224,6
+74:235
+75,3:237
+77:240,3
+78,8:244
+85:252,3
+86,5:256
+*E

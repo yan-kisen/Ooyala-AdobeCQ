@@ -1,0 +1,31 @@
+SMAP
+captcha_jsp.java
+JSP
+*S JSP
+*F
++ 0 global.jsp
+libs/foundation/global.jsp
++ 1 captcha.jsp
+libs/foundation/components/form/captcha/captcha.jsp
+*L
+58:80
+59:82
+60:84
+61:86
+62:88
+62:90,4
+66:145
+18#1:146
+26,9:149
+34,8:158
+42:166,3
+43,21:169
+64:190,3
+65:193
+66,2:194,3
+68:200,5
+69,3:205
+72:208,3
+73,6:211
+79,3:218
+*E

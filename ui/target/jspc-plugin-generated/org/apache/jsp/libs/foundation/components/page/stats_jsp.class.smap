@@ -1,0 +1,33 @@
+SMAP
+stats_jsp.java
+JSP
+*S JSP
+*F
++ 0 global.jsp
+libs/foundation/global.jsp
++ 1 stats.jsp
+libs/foundation/components/page/stats.jsp
+*L
+58:89
+59:91
+60:93
+61:95
+62:97
+62:99,4
+66:154
+14#1:156
+15:158
+16:160
+17:162
+18:164
+19:166
+20,2:30
+21:214,6
+24,8:172
+31,3:180
+34:183,5
+35,3:188
+38,2:192
+39:194
+40:233,6
+*E

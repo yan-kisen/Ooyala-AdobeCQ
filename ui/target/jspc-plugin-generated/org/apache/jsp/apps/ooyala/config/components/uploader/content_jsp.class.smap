@@ -1,0 +1,10 @@
+SMAP
+content_jsp.java
+JSP
+*S JSP
+*F
++ 0 content.jsp
+apps/ooyala/config/components/uploader/content.jsp
+*L
+15,30:53
+*E

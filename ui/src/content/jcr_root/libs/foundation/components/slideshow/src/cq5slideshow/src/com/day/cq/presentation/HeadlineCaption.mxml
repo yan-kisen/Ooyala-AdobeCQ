@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" height="30">
+
+	<mx:Script>
+		<![CDATA[
+			
+			[Bindable] public var caption : String = "";
+			
+			private function set makeVisible(s : String) : void {
+				this.visible = (s.length > 0);
+			}
+		]]>
+	</mx:Script>
+	
+	<mx:Binding source="caption" destination="makeVisible" />
+
+	<mx:Canvas x="0" y="0" width="{this.width}" height="{this.height}" backgroundColor="#000000" alpha="0.5">	
+		<mx:Label x="0" y="0" width="{this.width}" textAlign="center" fontFamily="Arial" fontSize="20" color="#ffffff" text="{caption}" />
+	</mx:Canvas>
+	
+</mx:Canvas>

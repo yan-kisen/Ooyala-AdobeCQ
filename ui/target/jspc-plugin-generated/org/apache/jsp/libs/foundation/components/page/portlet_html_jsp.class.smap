@@ -1,0 +1,19 @@
+SMAP
+portlet_html_jsp.java
+JSP
+*S JSP
+*F
++ 0 portlet.html.jsp
+libs/foundation/components/page/portlet.html.jsp
+*L
+26:62
+27:64
+27:66,4
+31,16:121
+46:137,2
+47,2:139
+48:164,6
+48:142
+49:183,6
+49,3:145
+*E

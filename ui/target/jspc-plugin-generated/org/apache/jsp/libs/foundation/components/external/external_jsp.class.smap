@@ -1,0 +1,21 @@
+SMAP
+external_jsp.java
+JSP
+*S JSP
+*F
++ 0 global.jsp
+libs/foundation/global.jsp
++ 1 external.jsp
+libs/foundation/components/external/external.jsp
+*L
+58:77
+59:79
+60:81
+61:83
+62:85
+62:87,4
+66:142
+20#1:145
+20:166,6
+20:148
+*E

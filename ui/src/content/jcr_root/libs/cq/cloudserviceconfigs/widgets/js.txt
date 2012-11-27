@@ -1,0 +1,11 @@
+#base=source
+
+#init namespace
+CQ.cloudservices.js
+
+#components
+CloudService.Actions.js
+CloudConfigurationCombo.js
+CloudServiceDialog.js
+CloudServicePanel.js
+CloudServiceSummaryPanel.js

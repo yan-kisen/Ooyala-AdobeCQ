@@ -1,0 +1,20 @@
+SMAP
+listitem_005fnews_jsp.java
+JSP
+*S JSP
+*F
++ 0 listitem_news.jsp
+libs/foundation/components/mobilelist/listitem_news.jsp
+*L
+23:56
+29,7:59
+35:66,10
+37,2:78
+38:80,3
+39,3:84
+41:87,3
+43,2:92
+44:94,3
+45,3:98
+47:101
+*E

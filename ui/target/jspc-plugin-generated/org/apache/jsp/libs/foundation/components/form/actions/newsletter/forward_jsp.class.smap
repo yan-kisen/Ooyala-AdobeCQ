@@ -1,0 +1,15 @@
+SMAP
+forward_jsp.java
+JSP
+*S JSP
+*F
++ 0 forward.jsp
+libs/foundation/components/form/actions/newsletter/forward.jsp
+*L
+19:58
+20:60
+21:62
+22:64
+22:66,4
+23,8:92
+*E

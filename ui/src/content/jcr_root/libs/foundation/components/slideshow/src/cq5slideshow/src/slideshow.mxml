@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" creationComplete="onCreationComplete()"
+	xmlns:cq="com.day.cq.*" backgroundAlpha="1" backgroundColor="#ffffff" backgroundGradientAlphas="[1.0, 1.0]">
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.states.SetStyle;
+			import com.day.cq.SlideReadyEvent;
+			import mx.controls.Alert;
+			import flash.utils.describeType;
+			import mx.utils.ObjectUtil;
+			import com.day.repository.SlideDataParser;
+			import com.day.repository.Sling;
+			import mx.collections.ArrayCollection;
+			import mx.events.FlexEvent;
+			import com.day.cq.Slide;
+		
+			private var numberOfExpectedSlides : int = 0;
+			private var numberOfReadySlides : int = 0;
+			private var currentSlidePointer : int = 0;
+			
+			private var contentPath : String = "";
+			private var webAppContextPath : String = "";
+		
+			private var slides : ArrayCollection = new ArrayCollection();
+			
+			private var t:Timer;
+			private const TIMER_INTERVAL:int = 10000;  
+		
+			private function onCreationComplete() : void {
+				if(Application.application.parameters.backgroundColor != null) {
+					this.setStyle("backgroundColor", "0x"+Application.application.parameters.backgroundColor);					
+				}
+				if(Application.application.parameters.webAppContextPath != null) {
+					this.webAppContextPath = Application.application.parameters.webAppContextPath;					
+				}				
+				contentPath = Application.application.parameters.contentPath;				
+				prepareData(contentPath);
+				
+				if(ExternalInterface.available) {
+					ExternalInterface.addCallback("redraw", redraw);						
+				}				
+			}
+			
+			// external API
+		    public function redraw() : void {
+		    	if(t!=null) {
+		    		t.stop();
+		    	}
+		        // remove all slides
+		        this.removeAllChildren();
+				numberOfExpectedSlides = 0;
+				numberOfReadySlides = 0;
+				currentSlidePointer = 0;
+				slides = new ArrayCollection();		        
+		        // start again
+		        prepareData(contentPath);
+		    }				
+			
+			private function prepareData(contentPath : String) : void {						
+				var sling : Sling = new Sling();				
+				var c : Object = sling.getContent(contentPath, 3);
+				for (var a : String in c) {					
+					if(typeof c[a] == "object" && c[a].hasOwnProperty("fileReference")) { // this is a slide
+						numberOfExpectedSlides++;
+						var slide : Slide = SlideDataParser.parseRepositoryData(c[a], contentPath + a, webAppContextPath);	
+						slide.width = this.width;
+						slide.height = this.height;	
+						this.addChild(slide);
+						slides.addItem(slide);
+						//slide.addEventListener(FlexEvent.CREATION_COMPLETE, slideReadyCounter);
+						slide.addEventListener("isReady", slideReadyCounter);
+					}		
+				}		
+			}
+		
+			private function slideReadyCounter(event:Event):void {
+				numberOfReadySlides++;
+				if(numberOfReadySlides == numberOfExpectedSlides) {
+					startAnimation(); 
+				}
+			}
+			
+			private function startAnimation():void {
+				if(slides.length > 0) {
+					Slide(slides.getItemAt(0)).visible = true;
+				}
+				// if there is only one slide we shall not start the time
+				if(slides.length > 1) {
+					t = new Timer(TIMER_INTERVAL);
+		            t.addEventListener(TimerEvent.TIMER, updateTimer);	
+		            t.start();
+		  		}
+			}	
+			
+			private function updateTimer(evt:TimerEvent):void {
+				// slide visibility stuff
+				Slide(slides.getItemAt(currentSlidePointer)).visible = false;
+				currentSlidePointer++;
+				if(currentSlidePointer == slides.length) {
+					currentSlidePointer = 0;
+				}
+				// move the slide to show on top of the view stack
+				var currentIndex : int = this.getChildIndex(Slide(slides.getItemAt(currentSlidePointer)));
+				this.setChildIndex(Slide(slides.getItemAt(currentSlidePointer)), this.getChildren().length - 1);
+				Slide(slides.getItemAt(currentSlidePointer)).visible = true;
+			}		
+		
+		]]>
+	</mx:Script>
+	
+</mx:Application>

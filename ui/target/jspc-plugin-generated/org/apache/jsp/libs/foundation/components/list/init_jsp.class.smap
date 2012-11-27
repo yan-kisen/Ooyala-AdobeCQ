@@ -1,0 +1,21 @@
+SMAP
+init_jsp.java
+JSP
+*S JSP
+*F
++ 0 init.jsp
+libs/foundation/components/list/init.jsp
++ 1 global.jsp
+libs/foundation/global.jsp
+*L
+20:76
+21:78
+58#1:80
+59:82
+60:84
+61:86
+62:88
+62:90,4
+66:145
+23#0,4:148
+*E

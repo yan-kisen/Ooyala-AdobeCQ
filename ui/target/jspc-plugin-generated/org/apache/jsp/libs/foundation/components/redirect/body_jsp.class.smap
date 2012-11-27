@@ -1,0 +1,21 @@
+SMAP
+body_jsp.java
+JSP
+*S JSP
+*F
++ 0 global.jsp
+libs/foundation/global.jsp
++ 1 body.jsp
+libs/foundation/components/redirect/body.jsp
+*L
+58:77
+59:79
+60:81
+61:83
+62:85
+62:87,4
+66:142
+21#1:144,2
+21:166,6
+21,2:148
+*E

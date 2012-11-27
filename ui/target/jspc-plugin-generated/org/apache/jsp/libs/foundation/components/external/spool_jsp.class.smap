@@ -1,0 +1,21 @@
+SMAP
+spool_jsp.java
+JSP
+*S JSP
+*F
++ 0 spool.jsp
+libs/foundation/components/external/spool.jsp
++ 1 global.jsp
+libs/foundation/global.jsp
+*L
+19:75
+58#1:77
+59:79
+60:81
+61:83
+62:85
+62:87,4
+66:142
+21#0,10:145
+30:155
+*E

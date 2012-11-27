@@ -1,0 +1,15 @@
+SMAP
+clientvalidation_jsp.java
+JSP
+*S JSP
+*F
++ 0 clientvalidation.jsp
+libs/foundation/components/form/constraints/name/clientvalidation.jsp
+*L
+19:60
+22:61
+24:63
+24:65,4
+25,4:91
+28:95
+*E

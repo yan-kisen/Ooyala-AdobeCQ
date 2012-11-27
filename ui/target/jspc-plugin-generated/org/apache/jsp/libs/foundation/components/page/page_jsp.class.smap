@@ -1,0 +1,19 @@
+SMAP
+page_jsp.java
+JSP
+*S JSP
+*F
++ 0 page.jsp
+libs/foundation/components/page/page.jsp
+*L
+26:62
+27:64
+27:66,4
+31,19:121
+49:140,2
+50,2:142
+51:167,6
+51:145
+52:186,6
+52,3:148
+*E

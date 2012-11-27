@@ -1,0 +1,30 @@
+
+#cq .cq-cloudservice-summary {
+    
+}
+
+#cq .cq-cloudservice-summary .x-form-item label {
+    
+}
+
+#cq .cq-cloudservice-summary .cq-static {
+    font-weight: bold; 
+}
+
+#cq .cq-cloudservice-summary .x-form-item {
+    border-bottom: 1px solid #D1E1F5;
+}
+
+#cq .cq-cloudservice-summary-info  {
+    margin-bottom: 20px;
+}
+
+#cq .cq-cloudservice-summary-info h1 {
+    font-size: 20px;
+    width: auto;
+    border: none;
+}
+
+#cq .cq-cloudservice-summary-info img {
+    float: right;
+}

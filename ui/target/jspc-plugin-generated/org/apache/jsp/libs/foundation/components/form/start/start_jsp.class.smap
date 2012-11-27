@@ -1,0 +1,31 @@
+SMAP
+start_jsp.java
+JSP
+*S JSP
+*F
++ 0 global.jsp
+libs/foundation/global.jsp
++ 1 start.jsp
+libs/foundation/components/form/start/start.jsp
+*L
+58:87
+59:89
+60:91
+61:93
+62:95
+62:97,4
+66:152
+19#1:154
+26:156
+26:207,4
+27:160
+28,4:162
+31:166
+32,5:168
+36:173
+36:224,6
+36:176
+37,4:178
+40:182,3
+41,4:186
+*E

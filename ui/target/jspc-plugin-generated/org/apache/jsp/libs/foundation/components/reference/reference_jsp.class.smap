@@ -1,0 +1,29 @@
+SMAP
+reference_jsp.java
+JSP
+*S JSP
+*F
++ 0 reference.jsp
+libs/foundation/components/reference/reference.jsp
++ 1 global.jsp
+libs/foundation/global.jsp
+*L
+30:79
+58#1:81
+59:83
+60:85
+61:87
+62:89
+62:91,4
+66:146
+33#0,18:150
+50:168,4
+50:173,6
+50:184
+51,2:186
+52:188,3
+53,8:192
+60:200,3
+61,5:204
+65:209
+*E

@@ -1,0 +1,24 @@
+SMAP
+sitemap_txt_jsp.java
+JSP
+*S JSP
+*F
++ 0 global.jsp
+libs/foundation/global.jsp
++ 1 sitemap.txt.jsp
+libs/foundation/components/primary/cq/Page/sitemap.txt.jsp
+*L
+58:224
+59:226
+60:228
+61:230
+62:232
+62:234,4
+66:289
+33#1,11:291
+43:302
+45,2:305
+46:307,4
+48:313
+49,137:36
+*E

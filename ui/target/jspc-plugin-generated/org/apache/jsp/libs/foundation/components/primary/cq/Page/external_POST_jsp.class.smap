@@ -1,0 +1,23 @@
+SMAP
+external_POST_jsp.java
+JSP
+*S JSP
+*F
++ 0 external.POST.jsp
+libs/foundation/components/primary/cq/Page/external.POST.jsp
++ 1 global.jsp
+libs/foundation/global.jsp
+*L
+20:93
+58#1:95
+59:97
+60:99
+61:101
+62:103
+62:105,4
+66:160
+20#0:162,4
+22,12:27
+34,3:180
+36,2:183
+*E

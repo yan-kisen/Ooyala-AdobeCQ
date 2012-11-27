@@ -1,0 +1,22 @@
+SMAP
+listitem_005fnews_jsp.java
+JSP
+*S JSP
+*F
++ 0 listitem_news.jsp
+libs/foundation/components/list/listitem_news.jsp
+*L
+1:55
+24:57
+30,7:60
+36:67,5
+37:72,3
+39,2:77
+40:79,3
+41,3:83
+43:86,3
+45,2:91
+46:93,3
+47,3:97
+49:100
+*E

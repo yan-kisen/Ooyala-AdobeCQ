@@ -1,0 +1,15 @@
+SMAP
+init_jsp.java
+JSP
+*S JSP
+*F
++ 0 init.jsp
+libs/foundation/components/form/checkbox/init.jsp
+*L
+19:58
+21:60
+22:62
+22:64,4
+23,5:90
+27:95
+*E

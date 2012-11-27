@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml"
+	hideEffect="{fadeOut}" showEffect="{fadeIn}" visible="false" 
+	horizontalScrollPolicy="off" verticalScrollPolicy="off" alpha="0.2"
+	xmlns:presentation="com.day.cq.presentation.*" creationPolicy="all"
+	click="click();" useHandCursor="{link.length > 0}" buttonMode="{link.length > 0}"  backgroundAlpha="0">
+	
+    <mx:Metadata>
+        [Event(name="isReady", type="com.day.cq.SlideReadyEvent")]
+    </mx:Metadata>
+	
+	
+	<mx:Script>
+		<![CDATA[
+			import flash.net.navigateToURL;
+			
+			[Bindable] public var imageUrl : String;
+			[Bindable] public var caption : String;
+			[Bindable] public var link : String = "";
+			
+			private function click() : void {
+				if(link.length > 0) navigateToURL(new URLRequest(link), "_parent");
+			}
+			
+			public function imageReadyCallback() : void {
+				dispatchEvent(new SlideReadyEvent("isReady")); 
+			}
+
+		]]>
+	</mx:Script>
+
+	 
+	<mx:Sequence id="fadeIn">
+		<mx:SetPropertyAction target="{currentImage}" name="currentState" value="playing" />
+		<mx:Fade alphaFrom="0" alphaTo="1" duration="1000" target="{this}" id="mmm"/>
+	</mx:Sequence>
+	
+	<mx:Sequence id="fadeOut">
+		<mx:Fade alphaFrom="1" alphaTo="0" duration="2000"  target="{this}"/>
+		<mx:SetPropertyAction target="{currentImage}" name="currentState" value="notPlaying" />
+	</mx:Sequence>
+	
+	
+	<presentation:KenBurnsEffectImage x="0" y="0" source="{imageUrl}" id="currentImage" width="{this.width}" height="{this.height}" slide="{this}"/>
+	<presentation:HeadlineCaption id="headline" caption="{caption}" x="0" y="0" alpha="{this.alpha}" width="{this.width}"/>
+	
+</mx:Canvas>

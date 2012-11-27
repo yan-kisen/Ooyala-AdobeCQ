@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Container xmlns:mx="http://www.adobe.com/2006/mxml" 
+	horizontalScrollPolicy="off" verticalScrollPolicy="off"
+	currentState="notPlaying" clipContent="false" creationPolicy="all" backgroundAlpha="0">
+	
+	<mx:states>
+		<mx:State name="playing"/>
+		<mx:State name="notPlaying"/>
+	</mx:states>
+    <mx:transitions>
+       <mx:Transition fromState="*" toState="playing">	
+			<mx:Parallel id="kenBurnsEffect">
+				<mx:Move target="{currentImage}" yTo="{-offsetY}" xTo="{-offsetX}" duration="10000"/>
+				<mx:AnimateProperty target="{currentImage}" property="scaleX" fromValue="{actualScale}" toValue="{actualScale * zoomFactor}" duration="10000"/>
+				<mx:AnimateProperty target="{currentImage}" property="scaleY" fromValue="{actualScale}" toValue="{actualScale * zoomFactor}" duration="10000"/>
+			</mx:Parallel>
+		</mx:Transition>
+       <mx:Transition toState="*" fromState="playing">	
+			<mx:Sequence startDelay="2000">
+				<!-- mx:SetPropertyAction name="visible" target="{this}" value="false" / -->
+				<mx:Move target="{currentImage}" yTo="0" xTo="0" duration="50"/>
+				<mx:AnimateProperty target="{currentImage}" property="scaleX" toValue="{actualScale}" duration="50"/>
+				<mx:AnimateProperty target="{currentImage}" property="scaleY" toValue="{actualScale}" duration="50"/>
+				
+			</mx:Sequence>
+		</mx:Transition>		
+	</mx:transitions>
+	
+	<mx:Script>
+		<![CDATA[
+			import com.day.cq.Slide;		
+			[Bindable] public var source : String;
+			[Bindable] public var slide : Slide;
+			
+			public function startEffect() : void {
+				kenBurnsEffect.play();
+			}		
+			
+			public function stopEffect() : void {
+				if(kenBurnsEffect.isPlaying) {
+					kenBurnsEffect.end();
+				}
+			}	
+			
+			private function smooth() : void {
+				var bmp:Bitmap = currentImage.content as Bitmap;
+				bmp.smoothing = true;
+				
+			}	
+			
+			[Bindable] private var actualScale : Number = 1;
+			[Bindable] private var zoomFactor : Number = 1.2;
+			
+			[Bindable] private var offsetX : Number = 0;
+			[Bindable] private var offsetY : Number = 0;
+			
+			private function imageLoaded() : void {
+				var actualScaleX : Number = 1;
+				var actualScaleY : Number = 1;
+				var bmp:Bitmap = currentImage.content as Bitmap;
+				var actualWidth : int = bmp.width;
+				var actualHeight : int = bmp.height;
+				
+				
+				// first set actual scale
+				if(actualWidth < this.width) {
+					actualScaleX = this.width / actualWidth;
+				}
+				if(actualHeight < this.height) {
+					actualScaleY = this.height / actualHeight;				
+				}
+				if(actualScaleX < actualScaleY) {
+					actualScale = actualScaleY;
+				} else {
+					actualScale = actualScaleX;
+				}
+				currentImage.scaleX = actualScale;
+				currentImage.scaleY = actualScale;	
+				
+				// how far can we move?
+				var maxOffsetX : Number = this.width * zoomFactor - this.width;	
+				offsetX = maxOffsetX * Math.random();
+				var maxOffsetY : Number = this.height * zoomFactor - this.height;	
+				offsetY = maxOffsetY;
+				
+				// inform slide
+				slide.imageReadyCallback();
+			}		
+		]]>
+	</mx:Script>
+	
+	
+	<mx:Image x="0" y="0" scaleContent="false" height="{this.height}" width="{this.width}" source="{source}" complete="smooth();imageLoaded();" maintainAspectRatio="true" id="currentImage"/>
+	
+</mx:Container>
