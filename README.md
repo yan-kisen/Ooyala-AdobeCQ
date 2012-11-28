@@ -6,9 +6,7 @@ Ooyala AdobeCQ Connector
 	<dd>Adobe CQ 5.5</dd>
 
 	<dt>Usage</dt>
-	<dd>A pre built package is available through github by clicking the download link above. 
-	Install the zip file into CQs package manager. Configuration instructions are available
-	in documentation/Ooyala-AdobeCQ-Documentation.pdf</dd>
+	<dd>A pre built package is available through github by clicking the download link above. Install the zip file into CQs package manager. Configuration instructions are available in documentation/Ooyala-AdobeCQ-Documentation.pdf</dd>
 </dl>
 
 
@@ -17,16 +15,13 @@ Building from Source
 
 <dl>
 	<dt>Requirements</dt>
-	<dd>Maven.</dd>
+	<dd>Maven, Adobe CQ5.5</dd>
 
 	<dt>Build</dt>
-	<dd>Clone the repository. Execute `mvn install` in the parent directory (Ooyala-AdobeCQ).</dd>
+	<dd>Clone the repository. Execute `mvn install` in the parent directory (Ooyala-AdobeCQ). A full content-package zip can be found under deploy/target.</dd>
 
 	<dt>Deploy</dt>
-	<dd>You can automatically deploy to the local CQ instance on any unix machine capable of 
-	running a bash script. CD into /cqpackage dir, and execute `./buildCqPackage.sh`. 
-	Note: be sure the file has executable permissions. All CQ connection parameters are
-	exposed clearly within this script for customization.</dd>
+	<dd>You can automatically deploy to the local CQ instance, using the built in deploy profile. (mvn clean install -Pdeploy,local-author) All CQ connection parameters are exposed clearly within the parent POM for customization.</dd>
 </dl>
 
 
